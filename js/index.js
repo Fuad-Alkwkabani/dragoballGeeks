@@ -1,5 +1,6 @@
 const characterApiUrl = 'https://dragonball-api.com/api/characters?limit=58';
 const planetApiUrl = 'https://dragonball-api.com/api/planets?limit=20';
+const transformationApiUrl = 'https://dragonball-api.com/api/transformations';
 
 const getAllCharacters = async () => {
     try {
@@ -70,5 +71,40 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     } else {
         planetList.innerHTML = '<p>No se pudieron cargar los planetas.</p>';
+    }
+});
+const getAllTransformations = async () => {
+    try {
+        const response = await fetch(transformationApiUrl);  // Realiza la petición a la API
+        const data = await response.json();  // Convierte la respuesta a JSON
+        return data;  // Asegúrate de devolver toda la respuesta, incluyendo 'data'
+    } catch (error) {
+        console.error('Error fetching planets:', error);
+        return [];  // Si ocurre un error, retorna un array vacío
+    }
+};
+document.addEventListener('DOMContentLoaded', async () => {
+    const transformationList = document.getElementById('transformation-list');
+    const transformations = await getAllTransformations();  
+    if (transformations) {
+        const transformationArray = transformations;  
+        console.log(transformations)
+        
+        transformationArray.forEach(transformation => {
+            const transformationCard = `
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="${transformation.image }" class="card-img-top" alt="${transformation.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${transformation.name}</h5>
+                            <p class="card-text">Descripción: ${transformation.ki}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            transformationList.innerHTML += transformationCard; 
+        });
+    } else {
+        transformationList.innerHTML = '<p>No se pudieron cargar los planetas.</p>';
     }
 });
