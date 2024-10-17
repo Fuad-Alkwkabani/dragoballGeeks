@@ -2,12 +2,7 @@
 
 Este proyecto es una tienda ficticia basada en Dragonball, que utiliza la [Dragonball API](https://web.dragonball-api.com/) para mostrar información sobre personajes,Transformaciones y planetas del universo Dragonball.
 
-## Instalación
 
-1. Clona el repositorio:
-   ```bash
-   git clone <tu-repositorio>
-   Abre el archivo index.html en tu navegador para ver el proyecto.
 <h2>Estructura del Proyecto</h2>
 -index.html: Página principal.
 -pages/personajes.html: Página que muestra a los personajes.
@@ -20,6 +15,12 @@ Funcionalidades
 -Planetas: Muestra todos los planetas del universo Dragonball en una sola página.
 -transformationes :uestra todos los transformationes del universo Dragonball en una sola página.
 
+## Instalación
+
+1. Clona el repositorio:
+   ```bash
+   git clone <tu-repositorio>
+   Abre el archivo index.html en tu navegador para ver el proyecto.
 
 ### 6. **Conclusión y siguiente pasos**
 
