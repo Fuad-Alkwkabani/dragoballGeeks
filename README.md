@@ -17,12 +17,12 @@ Funcionalidades
 
 ## Instalación
 
-1. Clona el repositorio:
+ .Clona el repositorio:
    ```bash
    git clone <tu-repositorio>
    Abre el archivo index.html en tu navegador para ver el proyecto.
 
-### 6. **Conclusión y siguiente pasos**
+### **Conclusión y siguiente pasos**
 
 Con este código, la página de planetasy transformation debería funcionar de la misma manera que la de personajes:
 
