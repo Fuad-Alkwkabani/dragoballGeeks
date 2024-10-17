@@ -1,5 +1,6 @@
 const characterApiUrl = 'https://dragonball-api.com/api/characters?limit=58';
 const planetApiUrl = 'https://dragonball-api.com/api/planets?limit=20';
+
 const getAllCharacters = async () => {
     try {
         const response = await fetch(characterApiUrl);
@@ -39,22 +40,21 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 const getAllPlanets = async () => {
     try {
-        const response = await fetch(planetApiUrl);  // Realiza la petición a la API
-        const data = await response.json();  // Convierte la respuesta a JSON
-        return data;  // Asegúrate de devolver toda la respuesta, incluyendo 'data'
+        const response = await fetch(planetApiUrl);  
+        const data = await response.json();  
+        return data;  
     } catch (error) {
         console.error('Error fetching planets:', error);
-        return [];  // Si ocurre un error, retorna un array vacío
+        return [];  
     }
 };
 document.addEventListener('DOMContentLoaded', async () => {
     const planetList = document.getElementById('planet-list');
-    const planets = await getAllPlanets();  // Llama a la función para obtener todos los planetas
-    // Verifica si los datos están en la propiedad 'data'
+    const planets = await getAllPlanets();  
     if (planets) {
-        const planetArray = planets;  // Aquí accedemos a la lista de planetas dentro de 'data'
+        const planetArray = planets;  
         console.log(planetArray.items)
-        // Recorre el array de planetas y genera el HTML para cada uno
+        
         planetArray.items.forEach(planet => {
             const planetCard = `
                 <div class="col-md-4">
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     </div>
                 </div>
             `;
-            planetList.innerHTML += planetCard;  // Agrega las tarjetas de planetas al contenedor
+            planetList.innerHTML += planetCard;  
         });
     } else {
         planetList.innerHTML = '<p>No se pudieron cargar los planetas.</p>';
