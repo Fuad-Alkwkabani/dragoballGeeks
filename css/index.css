@@ -79,7 +79,7 @@ a  {
     margin: 0 10px
 }
 .card {
-    background-color: #0c1416;
+    background-color: #292d2e;
     
 }
 .card-img-planet {
@@ -89,4 +89,8 @@ a  {
     max-width: 800px;
     box-sizing: inherit;
 
+}
+.card-img-planet:hover,
+.card-img-planet:focus {
+  transform: scale(1.20);
 }
