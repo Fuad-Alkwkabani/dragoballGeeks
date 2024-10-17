@@ -24,8 +24,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <img src="${character.image}" class="card-img-top" alt="${character.name}">
                         <div class="card-body">
                             <h5 class="card-title">${character.name}</h5>
-                            <p class="card-text">Raza: ${character.race || 'Desconocida'}</p>
-                            <p class="card-text">Descripción: ${character.description }</p>
+                            <p class="card-text"> ${character.race } ${character.gender}</p>
+                            <p class="card-text">Total KI: ${character.maxKi}</p>
+                            <p class="card-text">Base KI: ${character.ki}</p>
                         </div>
                     </div>
                 </div>
