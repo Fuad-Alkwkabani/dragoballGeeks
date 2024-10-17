@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const characterArray = characters;  
         console.log(characterArray.items)
         characterArray.items.forEach(character => {
-            const  characterCard = `
+            characterList.innerHTML += `
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <img src="${character.image}" class="card-img-top" alt="${character.name}">
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     </div>
                 </div>
             `;
-            characterList.innerHTML += characterCard; 
+             
         });
     } else {
         characterList.innerHTML = '<p>No se pudieron cargar los personajes.</p>';
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log(planetArray.items)
         
         planetArray.items.forEach(planet => {
-            const planetCard = `
+            planetList.innerHTML += `
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <img src="${planet.image }" class="card-img-planet" alt="${planet.name}">
@@ -66,8 +66,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         </div>
                     </div>
                 </div>
-            `;
-            planetList.innerHTML += planetCard;  
+            `; 
         });
     } else {
         planetList.innerHTML = '<p>No se pudieron cargar los planetas.</p>';
