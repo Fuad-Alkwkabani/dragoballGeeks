@@ -1,7 +1,7 @@
 body {
     margin: 0;
     height: 100vh; 
-    background-image: url('/git/1.gif'); 
+    background-image: url('/img/1.gif'); 
     background-size: 100% auto; 
     background-position: top center; 
     background-repeat: repeat;
@@ -29,6 +29,17 @@ p {
     color: #0c1416; 
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     padding: 0 20px;
+}
+header {
+    text-align: center;
+    
+}
+a  {
+    font-size: 1.2rem;
+    color: #ecf0f1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
 }
 .row {
     display: flex;
@@ -60,4 +71,9 @@ p {
 }
 .col-md-4{
     box-sizing: inherit;
+}
+.logo {
+    width: 80px; /* Ajusta el tamaño del logo según necesites */
+    vertical-align: middle; /* Alinea la imagen con el texto */
+    margin: 0 10px
 }
