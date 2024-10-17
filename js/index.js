@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <img src="${planet.image }" class="card-img-top" alt="${planet.name}">
                         <div class="card-body">
                             <h5 class="card-title">${planet.name}</h5>
-                            <p class="card-text">Descripción: ${planet.description || 'No disponible'}</p>
+                            <p class="card-text">Descripción : ${planet.description }</p>
                         </div>
                     </div>
                 </div>
