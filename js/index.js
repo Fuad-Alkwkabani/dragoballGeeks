@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const planetCard = `
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="${planet.image }" class="card-img-top" alt="${planet.name}">
+                        <img src="${planet.image }" class="card-img-planet" alt="${planet.name}">
                         <div class="card-body">
                             <h5 class="card-title">${planet.name}</h5>
                             <p class="card-text">Descripción : ${planet.description }</p>
