@@ -35,4 +35,4 @@ Con este código, la página de planetasy transformation debería funcionar de l
 2. **Probar** la página en distintos navegadores para asegurarte de que todo funciona bien.
 3. **Revisar los detalles de diseño** para que los estilos sean coherentes entre las páginas.
 
-Con esto, tienes una web completamente funcional que muestra tanto personajes como planetas y transformationes utilizando la API de Dragon Ball. ¡Éxito con el proyecto!
+
